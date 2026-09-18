@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ATM Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Navigation -->
+
+        <div class="navbar">
+
+            <div>
+                <strong>🏧 ATM</strong>
+            </div>
+
+            <div>
+                <a href="/dashboard">Home</a>
+                <a href="/balance">Balance</a>
+                <a href="/transactions">Transactions</a>
+                <a href="/logout">Logout</a>
+            </div>
+
+        </div>
+
+
+        <!-- Header -->
+
+        <div class="header">
+
+            <h1>ATM Dashboard</h1>
+
+            <p>
+                Welcome, {{ session["name"] }}
+            </p>
+
+        </div>
+
+
+        <!-- Dashboard Cards -->
+
+        <div class="dashboard">
+
+            <!-- Balance -->
+
+            <div class="card">
+
+                <h2>💰 Balance</h2>
+
+                <p>
+                    Check your current account balance.
+                </p>
+
+                <a href="/balance" class="btn">
+                    Check Balance
+                </a>
+
+            </div>
+
+
+            <!-- Deposit -->
+
+            <div class="card">
+
+                <h2>💵 Deposit</h2>
+
+                <p>
+                    Add money to your account.
+                </p>
+
+                <a href="/deposit"
+                   class="btn btn-success">
+
+                    Deposit
+
+                </a>
+
+            </div>
+
+
+            <!-- Withdraw -->
+
+            <div class="card">
+
+                <h2>💸 Withdraw</h2>
+
+                <p>
+                    Withdraw money from your account.
+                </p>
+
+                <a href="/withdraw"
+                   class="btn btn-danger">
+
+                    Withdraw
+
+                </a>
+
+            </div>
+
+
+            <!-- Transactions -->
+
+            <div class="card">
+
+                <h2>📋 Transactions</h2>
+
+                <p>
+                    View your transaction history.
+                </p>
+
+                <a href="/transactions"
+                   class="btn btn-secondary">
+
+                    View Transactions
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer">
+            ATM Demo Application | Python + Flask + MySQL
+        </div>
+
+    </div>
+
+</body>
+
+</html>

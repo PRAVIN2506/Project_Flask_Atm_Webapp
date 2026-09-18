@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Account Balance</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Navigation -->
+
+        <div class="navbar">
+
+            <div>
+                <strong>🏧 ATM</strong>
+            </div>
+
+            <div>
+                <a href="/dashboard">Home</a>
+                <a href="/balance">Balance</a>
+                <a href="/transactions">Transactions</a>
+                <a href="/logout">Logout</a>
+            </div>
+
+        </div>
+
+
+        <h1 class="page-title">
+            Account Balance
+        </h1>
+
+
+        <!-- Balance Card -->
+
+        <div class="balance-card">
+
+            <h2>
+                Available Balance
+            </h2>
+
+            <div class="balance">
+                ₹{{ balance }}
+            </div>
+
+            <a href="/dashboard"
+               class="btn btn-secondary">
+
+                Back to Dashboard
+
+            </a>
+
+        </div>
+
+
+        <div class="footer">
+            ATM Demo Application
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
